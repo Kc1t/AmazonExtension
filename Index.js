@@ -10,6 +10,21 @@ async function Exten(){
 
     const Weight = document.querySelector('.po-item_weight.a-spacing-small > .a-span9 > .po-break-word.a-size-base').innerText;
     
+    const BaseInner = document.querySelector('#centerCol > hr');
+
+    setTimeout(()=>{
+        BaseInner.insertAdjacentHTML(
+            "afterbegin",
+            `
+            <ul class="AmazContainer">
+            
+            <li> </li>
+
+            </ul>
+            `
+        )
+    })
+
 
     //Nome, Marca, Categoria, Dimensões, EAN, Link das imagens
 }
