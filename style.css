@@ -24,6 +24,7 @@
 }
         
 .AmazContainer li > span{
+    max-width: 300px;
     padding: 2px 4px;
     font-weight: bold;
     padding: 3px 5px;
@@ -31,6 +32,12 @@
     border: 1px solid #FFA41C;
     font-size: 12px;
     border-radius: 5px;
+
+
+    /* caso passe de 300px a linha se quebra */
+    display: -webkit-box; 
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }          
 
 .AmazContainer li > span:hover{
