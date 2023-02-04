@@ -10,8 +10,7 @@ async function Exten(){
     Cat = document.querySelector('.nav-b.nav-a > .nav-a-content')?.innerText || 'Não Informado',
     Weight = document.querySelector('.po-item_weight.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Informado',
     BaseInner = document.querySelector('.priceToPay.reinventPricePriceToPayMargin.aok-align-center.a-price > span'),
-    Dim = document.querySelector('.po-item_dimensions.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Informado',
-    EAN = document.querySelector('tr:nth-of-type(16) > .prodDetAttrValue.a-size-base')?.innerText || 'Não Informado';
+    Dim = document.querySelector('.po-item_dimensions.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Informado';
 
         BaseInner.insertAdjacentHTML(
             "beforebegin",
@@ -23,7 +22,7 @@ async function Exten(){
             <li>Categoria: <span id="CatCopy">${Cat}</span></li>
             <li>Peso: <span id="WeightCopy">${Weight}</span></li>
             <li>Dimensões C x L x A: <span id="DimCopy">${Dim}</span></li>
-            <li>EAN: <span id="EANCopy">${EAN}</span></li>
+            <!-- <li>EAN: <span id="EANCopy"></span></li> -->
             </ul>
 
             `
