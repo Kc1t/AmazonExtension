@@ -14,17 +14,19 @@ async function Exten(){
 
     setTimeout(()=>{
         BaseInner.insertAdjacentHTML(
-            "afterbegin",
+            "beforebegin",
             `
             <ul class="AmazContainer">
             
-            <li> </li>
+            <li>Nome:<span>${Name}</span></li>
 
             </ul>
             `
         )
-    })
+    },1000)
 
 
     //Nome, Marca, Categoria, Dimensões, EAN, Link das imagens
 }
+
+Exten()
