@@ -6,7 +6,7 @@
     "content_scripts":[
         {
            "matches": ["https://*.amazon.com.br/*"],
-           "css": ["style.scss"],
+           "css": ["style.css"],
            "js": ["index.js"]
         }
     ]
