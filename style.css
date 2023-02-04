@@ -1,0 +1,41 @@
+/*Estava usando scss mas estava com alguns bugs  */
+
+.AmazContainer{
+    max-width: 35vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border-top: 2px solid #FFA41C;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+.AmazContainer li{
+    text-align: right;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 3px;
+    padding-right: 10px;
+    
+}
+        
+.AmazContainer li > span{
+    padding: 2px 4px;
+    font-weight: bold;
+    padding: 3px 5px;
+    color: #FFA41C;
+    border: 1px solid #FFA41C;
+    font-size: 12px;
+    border-radius: 5px;
+}          
+
+.AmazContainer li > span:hover{
+    cursor: pointer;
+    background-color: #FFA41C;
+    color: #fff;
+    transition: background-color 0.5s;
+}
