@@ -43,10 +43,10 @@ Exten()
 
 // finding content by inner
 
-var headings = document.evaluate("//tr[contains(., 'EAN')]", document, null, XPathResult.ANY_TYPE, null );
-var thisHeading = headings.iterateNext();
+// var headings = document.evaluate("//tr[contains(., 'EAN')]", document, null, XPathResult.ANY_TYPE, null );
+// var thisHeading = headings.iterateNext();
 
-console.log(thisHeading); // Prints the html element in console
-console.log(thisHeading.textContent); // prints the text content in console
+// console.log(thisHea ding); // Prints the html element in console
+// console.log(thisHeading.textContent); // prints the text content in console
 
-thisHeading.innerHTML += "<br />Modified contents";  
+// thisHeading.innerHTML += "<br />Modified contents";  

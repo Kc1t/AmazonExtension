@@ -13,19 +13,17 @@
 
 
 .AmazContainer li{
-    text-align: right;
+    text-align: left;
     font-weight: 400;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    padding: 3px;
-    padding-right: 10px;
-    
+    padding: 3px 5px;
 }
         
 .AmazContainer li > span{
-    max-width: 300px;
-    padding: 2px 4px;
+    text-align: right;
+    max-width: 250px;
     font-weight: bold;
     padding: 3px 5px;
     color: #FFA41C;
@@ -33,10 +31,9 @@
     font-size: 12px;
     border-radius: 5px;
 
-
     /* caso passe de 300px a linha se quebra */
     display: -webkit-box; 
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }          
 

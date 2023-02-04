@@ -2,13 +2,19 @@
     "manifest_version": 3,
     "name": "AmazonScrapping",
     "description": "Extensão que junta as informções fornecidas da página em um só local facilitando a extração de dados para ecommerce",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "content_scripts":[
         {
            "matches": ["https://*.amazon.com.br/*"],
            "css": ["style.css"],
            "js": ["index.js"]
         }
-    ]
+    ],
+    "icons": {
+        "16": "icons/TempLogo.svg",
+        "32": "icons/TempLogo.svg",
+        "48": "icons/TempLogo.svg",
+        "128": "icons/TempLogo.svg"
+    }
     
 }
