@@ -13,7 +13,6 @@ async function Exten(){
     Dim = document.querySelector('.po-item_dimensions.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Informado',
     EAN = document.querySelector('tr:nth-of-type(16) > .prodDetAttrValue.a-size-base')?.innerText || 'Não Informado';
 
-    // setTimeout(()=>{
         BaseInner.insertAdjacentHTML(
             "beforebegin",
             `
@@ -30,39 +29,8 @@ async function Exten(){
             `
         )
 
-    
         //Copiar Texto da ${}, irei encurtar isso
 
-        const nameCopy = document.querySelector("#NameCopy");
-        nameCopy.addEventListener("click", function() {
-            copyText(nameCopy.textContent);
-          });
-
-        const brandCopy = document.querySelector("#BrandCopy")
-        brandCopy.addEventListener("click", function() {
-            copyText(brandCopy.textContent);
-          });
-
-        const catCopy = document.querySelector("#CatCopy")
-        catCopy.addEventListener("click", function() {
-            copyText(catCopy.textContent);
-          });
-
-        const weightCopy = document.querySelector("#WeightCopy")
-        weightCopy.addEventListener("click", function() {
-            copyText(weightCopy.textContent);
-          });
-          
-        const dimCopy = document.querySelector("#DimCopy")
-        dimCopy.addEventListener("click", function() {
-            copyText(dimCopy.textContent);
-          });
-
-        const eanCopy = document.querySelector("#EANCopy")
-        eanCopy.addEventListener("click", function() {
-            copyText(eanCopy.textContent);
-          });
-        
         function copyText(textToCopy) {
             const textarea = document.createElement("textarea");
             textarea.value = textToCopy;
@@ -71,9 +39,68 @@ async function Exten(){
             document.execCommand("copy");
             textarea.remove();
             console.log("COPIADO")
-          }
+            // alert("Copiado Para Área de Transferencia")
+        }
+        
+        const nameCopy = document.querySelector("#NameCopy");
+        nameCopy.addEventListener("click", function() {
+            const originalText = nameCopy.textContent;
+            nameCopy.textContent = "Copiado";
+            copyText(originalText);
+            setTimeout(function() {
+              nameCopy.textContent = originalText;
+            }, 1000);
+          });
 
-    // },1000)
+        const brandCopy = document.querySelector("#BrandCopy")
+        brandCopy.addEventListener("click", function() {
+            const originalText = brandCopy.textContent;
+            brandCopy.textContent = "Copiado";
+            copyText(originalText);
+            setTimeout(function() {
+              brandCopy.textContent = originalText;
+            }, 1000);
+          });
+
+        const catCopy = document.querySelector("#CatCopy")
+        catCopy.addEventListener("click", function() {
+            const originalText = catCopy.textContent;
+            catCopy.textContent = "Copiado";
+            copyText(originalText);
+            setTimeout(function() {
+              catCopy.textContent = originalText;
+            }, 1000);
+          });
+
+        const weightCopy = document.querySelector("#WeightCopy")
+        weightCopy.addEventListener("click", function() {
+            const originalText = weightCopy.textContent;
+            weightCopy.textContent = "Copiado";
+            copyText(originalText);
+            setTimeout(function() {
+              weightCopy.textContent = originalText;
+            }, 1000);
+          });
+          
+        const dimCopy = document.querySelector("#DimCopy")
+        dimCopy.addEventListener("click", function() {
+            const originalText = dimCopy.textContent;
+            dimCopy.textContent = "Copiado";
+            copyText(originalText);
+            setTimeout(function() {
+              dimCopy.textContent = originalText;
+            }, 1000);
+          });
+
+          const eanCopy = document.querySelector("#EANCopy");
+          eanCopy.addEventListener("click", function() {
+            const originalText = eanCopy.textContent;
+            eanCopy.textContent = "Copiado";
+            copyText(originalText);
+            setTimeout(function() {
+              eanCopy.textContent = originalText;
+            }, 1000);
+          });
 
 }
 
