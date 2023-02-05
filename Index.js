@@ -5,12 +5,13 @@ async function Exten(){
     //Nome, Marca, Categoria, Dimensões, EAN, Link das imagens
 
     const
-    Name = document.querySelector('.product-title-word-break.a-size-large')?.innerText || 'Não Informado',
-    Brand = document.querySelector('.po-brand.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Informado',
-    Cat = document.querySelector('.nav-b.nav-a > .nav-a-content')?.innerText || 'Não Informado',
-    Weight = document.querySelector('.po-item_weight.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Informado',
+    Name = document.querySelector('.product-title-word-break.a-size-large')?.innerText || 'Não Disponivel',
+    Brand = document.querySelector('.po-brand.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Disponivel',
+    Cat = document.querySelector('.nav-b.nav-a > .nav-a-content')?.innerText || 'Não Disponivel',
+    Weight = document.querySelector('.po-item_weight.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Disponivel',
+    Dim = document.querySelector('.po-item_dimensions.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Disponivel',
+    Img = document.querySelector('')?.innerText || 'Não Disponivel'
     BaseInner = document.querySelector('.priceToPay.reinventPricePriceToPayMargin.aok-align-center.a-price > span'),
-    Dim = document.querySelector('.po-item_dimensions.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Informado';
 
         BaseInner.insertAdjacentHTML(
             "beforebegin",
@@ -22,6 +23,7 @@ async function Exten(){
             <li>Categoria: <span id="CatCopy">${Cat}</span></li>
             <li>Peso: <span id="WeightCopy">${Weight}</span></li>
             <li>Dimensões C x L x A: <span id="DimCopy">${Dim}</span></li>
+            <li>Imagem Principal: <span id="DimCopy">${Img}</span></li>
             <!-- <li>EAN: <span id="EANCopy"></span></li> -->
             </ul>
 
