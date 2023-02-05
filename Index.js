@@ -10,20 +10,22 @@ async function Exten(){
     Cat = document.querySelector('.nav-b.nav-a > .nav-a-content')?.innerText || 'Não Disponivel',
     Weight = document.querySelector('.po-item_weight.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Disponivel',
     Dim = document.querySelector('.po-item_dimensions.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Disponivel',
-    Img = document.querySelector('')?.innerText || 'Não Disponivel'
-    BaseInner = document.querySelector('.priceToPay.reinventPricePriceToPayMargin.aok-align-center.a-price > span'),
+    Img = document.querySelector('.selected.maintain-height.itemNo0.item.image > .a-list-item > .a-declarative > .imgTagWrapper > img'),
+    Src = Img.getAttribute('src');
+
+    let BaseInner = document.querySelector('.priceToPay.reinventPricePriceToPayMargin.aok-align-center.a-price > span');
 
         BaseInner.insertAdjacentHTML(
             "beforebegin",
             `
             <ul class="AmazContainer">
             
-            <li>Nome: <span id="NameCopy">${Name}</span></li>
+            <li>Nome: <span id="NameCopy" class="limited-text" data-text="o texto exibido aqui sera limitado"+>${Name}</span></li>
             <li>Marca: <span id="BrandCopy">${Brand}</span></li>
             <li>Categoria: <span id="CatCopy">${Cat}</span></li>
             <li>Peso: <span id="WeightCopy">${Weight}</span></li>
             <li>Dimensões C x L x A: <span id="DimCopy">${Dim}</span></li>
-            <li>Imagem Principal: <span id="DimCopy">${Img}</span></li>
+            <li>Imagem Principal: <span id="SrcCopy" class="limited-text" data-text="o texto exibido aqui sera limitado">${Src}</span></li>
             <!-- <li>EAN: <span id="EANCopy"></span></li> -->
             </ul>
 
@@ -83,23 +85,23 @@ async function Exten(){
             }, 1000);
           });
           
-        const dimCopy = document.querySelector("#DimCopy")
-        dimCopy.addEventListener("click", function() {
-            const originalText = dimCopy.textContent;
-            dimCopy.textContent = "Copiado";
-            copyText(originalText);
-            setTimeout(function() {
-              dimCopy.textContent = originalText;
-            }, 1000);
-          });
+        // const dimCopy = document.querySelector("#DimCopy")
+        // dimCopy.addEventListener("click", function() {
+        //     const originalText = dimCopy.textContent;
+        //     dimCopy.textContent = "Copiado";
+        //     copyText(originalText);
+        //     setTimeout(function() {
+        //       dimCopy.textContent = originalText;
+        //     }, 1000);
+        //   });
 
-          const eanCopy = document.querySelector("#EANCopy");
-          eanCopy.addEventListener("click", function() {
-            const originalText = eanCopy.textContent;
-            eanCopy.textContent = "Copiado";
+          const imgCopy = document.querySelector("#SrcCopy");
+          imgCopy.addEventListener("click", function() {
+            const originalText = imgCopy.textContent;
+            imgCopy.textContent = "Copiado";
             copyText(originalText);
             setTimeout(function() {
-              eanCopy.textContent = originalText;
+              imgCopy.textContent = originalText;
             }, 1000);
           });
 
@@ -110,7 +112,7 @@ Exten()
 
 // finding content by inner
 
-// var headings = document.evaluate("//tr[contains(., 'EAN')]", document, null, XPathResult.ANY_TYPE, null );
+// var headings = document.evaluate("//tr[contains(.,img')]", document, null, XPathResult.ANY_TYPE, null );
 // var thisHeading = headings.iterateNext();
 
 // console.log(thisHea ding); // Prints the html element in console
