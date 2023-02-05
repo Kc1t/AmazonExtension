@@ -19,14 +19,12 @@ async function Exten(){
             "beforebegin",
             `
             <ul class="AmazContainer">
-            
             <li>Nome: <span id="NameCopy" class="limited-text" data-text="o texto exibido aqui sera limitado"+>${Name}</span></li>
             <li>Marca: <span id="BrandCopy">${Brand}</span></li>
             <li>Categoria: <span id="CatCopy">${Cat}</span></li>
             <li>Peso: <span id="WeightCopy">${Weight}</span></li>
             <li>Dimensões C x L x A: <span id="DimCopy">${Dim}</span></li>
             <li>Imagem Principal: <span id="SrcCopy" class="limited-text" data-text="o texto exibido aqui sera limitado">${Src}</span></li>
-            <!-- <li>EAN: <span id="EANCopy"></span></li> -->
             </ul>
 
             `
@@ -42,7 +40,6 @@ async function Exten(){
             document.execCommand("copy");
             textarea.remove();
             console.log("COPIADO")
-            // alert("Copiado Para Área de Transferencia")
         }
         
         const nameCopy = document.querySelector("#NameCopy");
