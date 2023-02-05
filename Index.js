@@ -85,15 +85,15 @@ async function Exten(){
             }, 1000);
           });
           
-        // const dimCopy = document.querySelector("#DimCopy")
-        // dimCopy.addEventListener("click", function() {
-        //     const originalText = dimCopy.textContent;
-        //     dimCopy.textContent = "Copiado";
-        //     copyText(originalText);
-        //     setTimeout(function() {
-        //       dimCopy.textContent = originalText;
-        //     }, 1000);
-        //   });
+        const dimCopy = document.querySelector("#DimCopy")
+        dimCopy.addEventListener("click", function() {
+            const originalText = dimCopy.textContent;
+            dimCopy.textContent = "Copiado";
+            copyText(originalText);
+            setTimeout(function() {
+              dimCopy.textContent = originalText;
+            }, 1000);
+          });
 
           const imgCopy = document.querySelector("#SrcCopy");
           imgCopy.addEventListener("click", function() {
