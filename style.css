@@ -37,17 +37,6 @@
     -webkit-box-orient: vertical;
 }   
 
-.AmazContainer select{
-    text-align: right;
-    max-width: 250px;
-    font-weight: bold;
-    padding: 3px 5px;
-    color: #FFA41C;
-    border: 1px solid #FFA41C;
-    font-size: 12px;
-    border-radius: 5px;
-}
-
 .AmazContainer .limited-text {
     display: inline-block;
     max-width: 250px;
