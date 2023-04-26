@@ -13,7 +13,7 @@ async function Exten(){
     Img = document.querySelector('.selected.maintain-height.itemNo0.item.image > .a-list-item > .a-declarative > .imgTagWrapper > img'),
     Src = Img.getAttribute('src');
     let EanContent = Array.from(document.querySelectorAll('td')).find(td => td.textContent.trim().startsWith('789'));
-    let Ean = EanContent.textContent;
+    let Ean = EanContent ? EanContent.textContent : "Não encontrado";
 
     let BaseInner = document.querySelector('.priceToPay.reinventPricePriceToPayMargin.aok-align-center.a-price > span');
 
