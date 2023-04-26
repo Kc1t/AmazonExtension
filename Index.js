@@ -2,7 +2,7 @@
 
 async function Exten(){
     
-    //Nome, Marca, Categoria, Dimensões, EAN, Link das imagens
+    //Pega Nome, Marca, Categoria, Dimensões, EAN, Link das imagens e passa para o mini Dashboard de modo a mais facil analise
 
     const
     Name = document.querySelector('.product-title-word-break.a-size-large')?.innerText || 'Não Disponivel',
@@ -12,6 +12,8 @@ async function Exten(){
     Dim = document.querySelector('.po-item_dimensions.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Disponivel',
     Img = document.querySelector('.selected.maintain-height.itemNo0.item.image > .a-list-item > .a-declarative > .imgTagWrapper > img'),
     Src = Img.getAttribute('src');
+    let EanContent = Array.from(document.querySelectorAll('td')).find(td => td.textContent.trim().startsWith('789'));
+    let Ean = EanContent.textContent;
 
     let BaseInner = document.querySelector('.priceToPay.reinventPricePriceToPayMargin.aok-align-center.a-price > span');
 
@@ -25,12 +27,14 @@ async function Exten(){
             <li>Peso: <span id="WeightCopy">${Weight}</span></li>
             <li>Dimensões C x L x A: <span id="DimCopy">${Dim}</span></li>
             <li>Imagem Principal: <span id="SrcCopy" class="limited-text" data-text="o texto exibido aqui sera limitado">${Src}</span></li>
+            <li>Ean: <span id="EanCopy">${Ean}</span></li>
             </ul>
 
             `
         )
 
-        //Copiar Texto da ${}, irei encurtar isso
+        //Função para que copie para o clipboard ao clicar no span
+        //Encurtar Isso em uma função só
 
         function copyText(textToCopy) {
             const textarea = document.createElement("textarea");
@@ -102,17 +106,16 @@ async function Exten(){
             }, 1000);
           });
 
+          const EanCopy = document.querySelector("#EanCopy");
+          EanCopy.addEventListener("click", function() {
+            const originalText = EanCopy.textContent;
+            EanCopy.textContent = "Copiado";
+            copyText(originalText);
+            setTimeout(function() {
+              EanCopy.textContent = originalText;
+            }, 1000);
+          });
+
 }
 
 Exten()
-
-
-// finding content by inner
-
-// var headings = document.evaluate("//tr[contains(.,img')]", document, null, XPathResult.ANY_TYPE, null );
-// var thisHeading = headings.iterateNext();
-
-// console.log(thisHea ding); // Prints the html element in console
-// console.log(thisHeading.textContent); // prints the text content in console
-
-// thisHeading.innerHTML += "<br />Modified contents";  
