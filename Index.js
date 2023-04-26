@@ -5,7 +5,7 @@ async function Exten(){
     //Pega Nome, Marca, Categoria, Dimensões, EAN, Link das imagens e passa para o mini Dashboard de modo a mais facil analise
 
     const
-    Name = document.querySelector('.product-title-word-break.a-size-large')?.innerText || 'Não Disponivel',
+    Name = document.querySelector('.product-title-resize.product-title-word-break.a-size-medium')?.innerText || 'Não Disponivel',
     Brand = document.querySelector('.po-brand.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Disponivel',
     Cat = document.querySelector('.nav-b.nav-a > .nav-a-content')?.innerText || 'Não Disponivel',
     Weight = document.querySelector('.po-item_weight.a-spacing-small > .a-span9 > .po-break-word.a-size-base')?.innerText || 'Não Disponivel',
@@ -13,7 +13,7 @@ async function Exten(){
     Img = document.querySelector('.selected.maintain-height.itemNo0.item.image > .a-list-item > .a-declarative > .imgTagWrapper > img'),
     Src = Img.getAttribute('src');
     let EanContent = Array.from(document.querySelectorAll('td')).find(td => td.textContent.trim().startsWith('789'));
-    let Ean = EanContent ? EanContent.textContent : "Não encontrado";
+    let Ean = EanContent ? EanContent.textContent : "Não Disponivel";
 
     let BaseInner = document.querySelector('.priceToPay.reinventPricePriceToPayMargin.aok-align-center.a-price > span');
 
